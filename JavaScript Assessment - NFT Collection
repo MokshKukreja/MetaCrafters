@@ -1,0 +1,32 @@
+let nfts = [];
+
+function mintNFT(name, artist, year, description) {
+    const nft = {
+        name: name,
+        artist: artist,
+        year: year,
+        description: description
+    };
+    nfts.push(nft);
+}
+
+function listNFTs() {
+    for (let i = 0; i < nfts.length; i++) {
+        console.log(`Name: ${nfts[i].name}`);
+        console.log(`Artist: ${nfts[i].artist}`);
+        console.log(`Year: ${nfts[i].year}`);
+        console.log(`Description: ${nfts[i].description}`);
+        console.log('----------------------');
+    }
+}
+
+function getTotalSupply() {
+    return nfts.length;
+}
+
+mintNFT("Dilwale Dulhania Le Jayenge", "Shah Rukh Khan", 1995, "A romantic drama about love and tradition.");
+mintNFT("Dangal", "Aamir Khan", 2016, "A biographical sports drama based on the lives of the Phogat sisters.");
+mintNFT("Queen", "Kangana Ranaut", 2013, "A comedy-drama about a woman's self-discovery journey.");
+
+listNFTs();
+console.log("Total NFTs minted: " + getTotalSupply());
